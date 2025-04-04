@@ -58,6 +58,7 @@ ggcorrplot(corr,
 #Grouping by number of cylinders (4, 6, 8) with average mpg and horsepower.
 install.packages('dplyr')
 library(dplyr)
+
 mtcars %>%
   group_by(cyl) %>%
   summarise(avg_mpg = mean(mpg), avg_hp = mean(hp))
